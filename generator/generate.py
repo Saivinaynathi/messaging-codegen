@@ -80,12 +80,13 @@ def generate(platform: str) -> None:
     print("Invoking Codex...")
 
     result = subprocess.run(
-        [
-            "codex",
-            "exec",
-            "--full-auto",
-            "-",
-        ],
+    [
+        "codex",
+        "exec",
+        "--sandbox",
+        "workspace-write",
+        "-",
+    ],
         input=prompt,
         text=True,
         cwd=ROOT,
