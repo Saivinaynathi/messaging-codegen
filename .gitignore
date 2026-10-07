@@ -13,3 +13,6 @@ clients/android/build/
 clients/android/app/build/
 clients/android/local.properties
 clients/android/*.log
+
+# Android Studio / IntelliJ IDEA
+.idea/
