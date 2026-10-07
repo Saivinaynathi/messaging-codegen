@@ -57,4 +57,13 @@ The generator has demonstrated that it can recreate both client implementations 
 
 Python regeneration passed automated tests and server interoperability verification. Android regeneration passed automated unit tests and produced a debug APK.
 
-The remaining verification is to launch the regenerated Android application and confirm runtime interoperability with the Python client.
+## Android Runtime Interoperability Validation
+
+The Android application was launched successfully in an emulator and tested against the local reference messaging server.
+
+- Android Alice and Python Bob successfully exchanged messages in both directions.
+- An Android message was queued while offline with `PENDING` status.
+- After reconnecting, the message transitioned to `SENT`.
+- Python Bob received the queued message exactly once.
+
+**Result: PASS for the tested Android/Python runtime interoperability and offline synchronization scenario.**
